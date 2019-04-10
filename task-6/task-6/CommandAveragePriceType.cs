@@ -3,7 +3,7 @@
     /// <summary>
     /// The class CommandAveragePriceType
     /// </summary>
-    class CommandAveragePriceType
+    class CommandAveragePriceType : ICommand
     {
         AllCommandClass types;
         public CommandAveragePriceType(AllCommandClass types)
