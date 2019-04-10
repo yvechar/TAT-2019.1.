@@ -11,7 +11,7 @@
         /// The constructor of  class
         /// </summary>
         /// <param name="command"></param>
-        public SetCommand(ICommand command)
+        public void Command(ICommand command)
         {
             this.command = command;
         }

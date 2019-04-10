@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace task_6
 {
     /// <summary>
-    /// 
+    /// Thhe class Client that works with commands thit input
     /// </summary>
     class Client
     {
@@ -32,35 +28,37 @@ namespace task_6
         /// <param name="file_name">name of xml file</param>
         public void CalledCommands(string file_name)
         {
+            SetCommand invoker = new SetCommand();
             AllCommandClass command = new AllCommandClass(@"D:\tasks\task-6\task-6\" + file_name);
-            while (true)
-            {
-                Console.WriteLine("Enter Command:/n" +
-                    " 1.brand(to get number of car brands);/n" +
-                    " 2.count(to get total number of cars);/n" +
-                    " 3.aprice (to get average cost of a car);/n"+
-                    " 4.apricetype (to get average cost of a car one type);/n"+
-                    " 5.exit(exit from programm)."
-                    );
-
+            Console.WriteLine("Enter Command:/n" +
+                " 1.brand(to get number of car brands);/n" +
+                " 2.count(to get total number of cars);/n" +
+                " 3.aprice (to get average cost of a car);/n" +
+                " 4.apricetype (to get average cost of a car one type);/n" +
+                " 5.exit(exit from programm)."
+                );
                 if(inputcommand == "brand")
                 {
-                    command.Get_Types();
+                    invoker.Command(new CommandTypes(command));
+                    invoker.GetCommand();
                 }
 
                 if (inputcommand == "count")
                 {
-                    command.Get_Count();
+                    invoker.Command(new CommandCount(command));
+                    invoker.GetCommand();
                 }
 
                 if (inputcommand == "aprice")
                 {
-                    command.Get_AveragePrice();
+                    invoker.Command(new CommandAveragePrice(command));
+                    invoker.GetCommand();
                 }
 
                 if (inputcommand == "apricetype")
                 {
-                    command.Get_AveragePriceType();
+                    invoker.Command(new CommandAveragePriceType(command));
+                    invoker.GetCommand(); ;
                 }
 
                 if (inputcommand == "exit")
@@ -71,7 +69,6 @@ namespace task_6
                 {
                     Console.WriteLine("Please, Enter correct command.");
                 }
-            }
         }
     }
 }
