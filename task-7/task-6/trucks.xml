@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<trucks>
+  <truck>
+    <brand>Ford</brand>
+    <model>5</model>
+    <amount>2</amount>
+    <price>4200</price>
+  </truck>
+  <truck>
+    <brand>Volvo</brand>
+    <model>2</model>
+    <amount>3</amount>
+    <price>4100</price>
+  </truck>
+  <truck>
+    <brand>Mersedes</brand>
+    <model>benz</model>
+    <amount>1</amount>
+    <price>5400</price>
+  </truck>
+</trucks>
