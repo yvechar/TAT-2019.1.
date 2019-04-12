@@ -5,8 +5,8 @@
     /// </summary>
     class CommandAveragePrice : ICommand
     {
-        AllCommandClass types;
-        public CommandAveragePrice(AllCommandClass types)
+        Transport types;
+        public CommandAveragePrice(Transport types)
         {
             this.types = types;
         }

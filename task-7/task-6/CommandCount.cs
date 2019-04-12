@@ -5,13 +5,13 @@
     /// </summary>
     class CommandCount : ICommand
     {
-            AllCommandClass types;
+            Transport types;
 
         /// <summary>
         /// The constructor of  class
         /// </summary>
         /// <param name="types"></param>
-        public CommandCount(AllCommandClass types)
+        public CommandCount(Transport types)
             {
                 this.types = types;
             }

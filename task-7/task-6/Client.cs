@@ -9,8 +9,9 @@ namespace task_6
     class Client
     {
         XmlDocument xDoc;
-        string inputcommand=null;
-      
+        public Car Car { get; set; }
+        public Truck Truck { get; set; }
+           
         /// <summary>
         /// The constructor of  class
         /// </summary>
@@ -26,10 +27,11 @@ namespace task_6
         /// The method that calls commands
         /// </summary>
         /// <param name="file_name">name of xml file</param>
-        public void CalledCommands(string file_name)
+        public void CalledCommands(string file_name1,string file_name2)
         {
             SetCommand invoker = new SetCommand();
-            AllCommandClass command = new AllCommandClass(@"D:\tasks\task-6\task-6\" + file_name);
+            Car = Car.getInstance(@"D:\tasks\task-6\task-6\" + file_name1);
+            Truck = Truck.getInstance(@"D:\tasks\task-6\task-6\" + file_name2);
             Console.WriteLine("Enter Command:/n" +
                 " 1.brand(to get number of car brands);/n" +
                 " 2.count(to get total number of cars);/n" +
@@ -37,27 +39,34 @@ namespace task_6
                 " 4.apricetype (to get average cost of a car one type);/n" +
                 " 5.exit(exit from programm)."
                 );
-                if(inputcommand == "brand")
+                string inputcommand=Console.ReadLine();
+                if (inputcommand == "brand")
                 {
-                    invoker.Command(new CommandTypes(command));
+                    invoker.Command(new CommandTypes(Car));
+                    invoker.GetCommand();
+                    invoker.Command(new CommandTypes(Truck));
                     invoker.GetCommand();
                 }
 
                 if (inputcommand == "count")
                 {
-                    invoker.Command(new CommandCount(command));
+                    invoker.Command(new CommandCount(Car));
+                    invoker.GetCommand();
+                    invoker.Command(new CommandTypes(Truck));
                     invoker.GetCommand();
                 }
 
                 if (inputcommand == "aprice")
                 {
-                    invoker.Command(new CommandAveragePrice(command));
+                    invoker.Command(new CommandAveragePrice(Car));
+                    invoker.GetCommand();
+                    invoker.Command(new CommandTypes(Truck));
                     invoker.GetCommand();
                 }
 
                 if (inputcommand == "apricetype")
                 {
-                    invoker.Command(new CommandAveragePriceType(command));
+                    invoker.Command(new CommandAveragePriceType(Car));
                     invoker.GetCommand(); ;
                 }
 

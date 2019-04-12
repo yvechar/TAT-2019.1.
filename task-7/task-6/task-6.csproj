@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllCommandClass.cs" />
+    <Compile Include="Transport.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="CommandAveragePrice.cs" />
     <Compile Include="CommandAveragePriceType.cs" />
@@ -53,13 +53,20 @@
     <Compile Include="ICommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetCommand.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="Truck.cs" />
+    <Compile Include="WorkWithCommands.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cars.xml" />
-    <Content Include="trucks.xml" />
+    <Content Include="cars.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="trucks.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
