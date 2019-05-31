@@ -9,7 +9,7 @@ namespace task_6
     /// </summary>
     class AllCommandClass
     {
-        XmlDocument xDoc;
+        XmlDocument xDoc { get; }
 
         /// <summary>
         /// The constructor of  class
@@ -17,7 +17,7 @@ namespace task_6
         /// <param name="file_name">name of xml file</param>
         public AllCommandClass (string file_name)
         {
-            xDoc = new XmlDocument();
+            this.xDoc = new XmlDocument();
             xDoc.Load(file_name);
         }
 
@@ -83,7 +83,7 @@ namespace task_6
                         price += Int32.Parse(childnode.InnerText);
                         count++;
                     }
-                    averige_price = price/count;
+                    averige_price = price / count;
                 }
                 Console.WriteLine("Averige price:... " + averige_price);
             }
