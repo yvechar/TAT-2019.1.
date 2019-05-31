@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<cars>
+  <car>
+    <brand>Volvo</brand>
+    <model>1a</model>
+    <amount>12</amount>
+    <price>1200</price>
+    </car>
+  <car>
+    <brand>Volvo</brand>
+    <model>2s</model>
+    <amount>23</amount>
+    <price>2100</price>
+  </car>
+  <car>
+    <brand>Mersedes</brand>
+    <model>benz</model>
+    <amount>43</amount>
+    <price>2400</price>
+  </car>
+  </cars>
