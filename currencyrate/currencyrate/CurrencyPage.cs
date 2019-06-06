@@ -17,9 +17,9 @@ namespace currencyrate
         List<IWebElement> Names { get; }
         List<IWebElement> Values { get; }
         private string page = "https://myfin.by/currency/minsk";
-        private string locator = "//div[@class = 'best-rates big-rates-table']";
-        private string nameLocator = "//div[@class = 'table-responsive']//tr/td/a";
-        private string valueLocator = "//div[@class = 'table-responsive']//tr/td[2]";
+        private string locator = "//div[@id = 'tab-best']";
+        private string nameLocator = "//div[@id = 'tab-best']//tr/td/a";
+        private string valueLocator = "//div[@id = 'tab-best']//tr/td[2]";
 
         /// <summary>
         /// The constructor of page
